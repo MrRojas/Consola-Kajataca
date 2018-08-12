@@ -4,14 +4,18 @@
 import sys 
 from clases.Menu import *
 
+menu = Menu()
 
 
 if( len(sys.argv) < 2 ):
-	menu = Menu()
-	menu.principal()
-else:
 
-	opciones = sys.argv
+	opcion = ''
+
+	while opcion != 'exit' and  opcion != 'salir' :
+		opcion = menu.principal()
+
 	
-	print(opciones[1])
+else:
+	menu.add_argumentos( sys.argv ) 
+	menu.lanzar_evento()
 

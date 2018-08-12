@@ -5,11 +5,46 @@ class Pantalla():
 	def __init__(self):
 		pass 
 
+	def limpiar(self):
+		os.system("cls")
+
+	def pausa(self):
+		os.system("pause > Kajataca 1.0")
+
+	def ocultar(self):
+		os.system("@echo off")
+
 	def fondo(self , color ):		
 		os.system("color " + color )
 
 	def cabezera(self , titulo ):		
 		os.system("title  " + titulo )
+
+	def getColor(self , color):
+
+		colores = {
+
+			'rojo' : '4f' , 'azul' : '1f' , 
+			'negro' : '0f' , 'cobalto' : '3f', 
+			'morado' : '5f'
+
+		}
+		control = False
+
+		for x in colores:
+			
+			if ( x == color):
+				control = True
+
+		print (control)
+		
+
+		if control == True: 
+			return colores[color]
+		else:
+			return colores['negro']
+
+		
 
 	def titulo(self , titulo):
 
@@ -18,6 +53,8 @@ class Pantalla():
 	def comando(self):
 
 		return input(" > ")
+
+
 
 
 
