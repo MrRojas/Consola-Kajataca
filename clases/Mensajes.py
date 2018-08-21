@@ -7,24 +7,32 @@ class Mensajes(Conexion):
 
 		self.nombre_db = 'C:/AppServ/www/consola/storage/armando.db'
 		
-		# Nuevo mensaje 
-		if(arg[2] == '-n'):
-			self.nuevoMensaje(arg)
+		if len(arg) > 2:
+			
+			# Nuevo mensaje 
+			if(arg[2] == '-n'):
+				self.nuevoMensaje(arg)
 
-		if(arg[2] == '-v'):
-			self.verMensajes(arg)
+			elif(arg[2] == '-v'):
+				self.verMensajes(arg)
+
+		else:
+			print("Hola usa -n para nuevo mensaje o -v para ver los mensajes ");
+
+	def capturaMensaje(self , arg):
+		pass
 
 	def capturarTexto (self , arg):
 		
 		i = 0
 		texto = ""
 
-		for x in arg:
+		for x  in arg:
 			
 			i = i + 1 
 
 			if(i > 3):
-				texto = texto + ' ' + x  
+				texto = texto + ' ' + arg[(i - 1)]  
 
 		return texto 
 

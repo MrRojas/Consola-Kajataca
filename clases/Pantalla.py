@@ -3,7 +3,7 @@ import os
 
 class Pantalla():
 	def __init__(self):
-		pass 
+		pass
 
 	def limpiar(self):
 		os.system("cls")
@@ -36,9 +36,6 @@ class Pantalla():
 			if ( x == color):
 				control = True
 
-		print (control)
-		
-
 		if control == True: 
 			return colores[color]
 		else:
@@ -53,6 +50,20 @@ class Pantalla():
 	def comando(self):
 
 		return input(" > ")
+
+
+	def capturar_comandos(self , texto  ):
+		
+		captura = texto.split(" ")
+		arg = {}
+		arg[0] = 'kajataca'
+		i = 1
+
+		for x in captura:
+			arg[i] = x
+			i = i + 1
+
+		return arg
 
 
 

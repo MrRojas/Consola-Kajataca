@@ -5,7 +5,7 @@ import sqlite3
 
 class Conexion():
 	
-	def __init__(self, nombre_db = 'storage/armando.db' ):
+	def __init__(self, nombre_db = 'C:/AppServ/www/consola/storage/armando.db' ):
 		
 		self.nombre_db = nombre_db 
 		pass 

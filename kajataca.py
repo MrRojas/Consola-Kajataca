@@ -13,6 +13,7 @@ if( len(sys.argv) < 2 ):
 
 	while opcion != 'exit' and  opcion != 'salir' :
 		opcion = menu.principal()
+		
 
 	
 else:

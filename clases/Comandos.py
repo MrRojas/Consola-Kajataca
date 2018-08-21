@@ -10,9 +10,20 @@ class Comandos():
 
 		texto = ""
 		arg[0] = ""
+		arg[1] = ""
+		i = 0
 		
 		for t in arg:
-			texto = texto + " " + t	
+			texto = texto + " " + arg[i]
+			i = 1 + i 	
 		
 		os.system(texto)
+
+
+	def buscar(self):
+		pass
+
+
+	def nuevo(self):
+		pass
 		
